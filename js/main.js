@@ -7,6 +7,18 @@
     const slides = ul.children;
     let currentIndex = 0;
 
+    function updateButtons () {
+        prev.classList.remove('hidden');
+        next.classList.remove('hidden');
+
+        if (currentIndex === 0) {
+            prev.classList.add('hidden');
+        }
+        if (currentIndex === slides.length - 1) {
+            next.classList.add('hidden');
+        }
+    }
+
     next.addEventListener('click', () => {
         currentIndex++;
         const slideWidth = slides[0].getBoundingClientRect().width;
