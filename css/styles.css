@@ -3,6 +3,7 @@
     height: 220px;
     margin: 16px auto;
     outline: 8px solid red;
+    overflow: hidden;
 }
 
 ul {
@@ -10,10 +11,12 @@ ul {
     margin: 0;
     padding: 0;
     height: 100%;
+    display: flex;
 }
 
 li {
     height: 100%;
+    min-width: 100%;
 }
 
 li img {
