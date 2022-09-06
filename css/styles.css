@@ -65,6 +65,10 @@ nav {
     text-align: center;
 }
 
+nav button + button {
+    margin-left: 8px;
+}
+
 nav button {
     border: none;
     width: 16px;
