@@ -19,13 +19,17 @@
         }
     }
 
+    updateButtons();
+
     next.addEventListener('click', () => {
         currentIndex++;
+        updateButtons();
         const slideWidth = slides[0].getBoundingClientRect().width;
         ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
     });
-
+    
     prev.addEventListener('click', () => {
+        updateButtons();
         currentIndex--;
         const slideWidth = slides[0].getBoundingClientRect().width;
         ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
